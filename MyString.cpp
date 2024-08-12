@@ -12,7 +12,7 @@ MyString::MyString(const char* str)
     size_t size = strlen(str);
     m_pStr = new char[size + 1];
 
-    for (int i = 0; i < size; i++)
+    for (size_t i = 0; i < size; i++)
     {
         m_pStr[i] = str[i];
     }
@@ -31,7 +31,7 @@ MyString::MyString(const MyString& oth)
     size_t size = strlen(oth.m_pStr);
     m_pStr = new char[size + 1];
 
-    for (int i = 0; i < size; i++)
+    for (size_t i = 0; i < size; i++)
     {
         m_pStr[i] = oth.m_pStr[i];
     }
@@ -71,7 +71,7 @@ void MyString::SetNewString(const char* str)
     size_t size = strlen(str);
     char* NewStr = new char[size + 1];
 
-    for (int i = 0; i < size; i++)
+    for (size_t i = 0; i < size; i++)
     {
         NewStr[i] = str[i];
     }
@@ -100,7 +100,7 @@ void MyString::SetNewString(const MyString& oth)
         size_t size = strlen(oth.m_pStr);
         char* NewStr = new char[size + 1];
 
-        for (int i = 0; i < size; i++)
+        for (size_t i = 0; i < size; i++)
         {
             NewStr[i] = oth.m_pStr[i];
         }
